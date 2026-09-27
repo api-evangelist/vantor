@@ -1,0 +1,60 @@
+openapi: 3.2.0
+info:
+  title: Vantor Credits API
+  version: 1.0.0
+  description: 'Operations tagged Credits across 2 of this provider''s published API definitions: admin-openapi.yml, maxar-technologies-credits-api-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.maxar.com/admin/v1
+  description: Vantor Hub production
+security:
+- bearerAuth: []
+tags:
+- name: Credits
+paths:
+  /accounts/{accountId}/credits:
+    get:
+      tags:
+      - Credits
+      summary: Get Credit Balance
+      operationId: getCredits
+      parameters:
+      - name: accountId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Credit balance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreditBalance'
+    servers:
+    - url: https://api.maxar.com/admin/v1
+      description: Vantor Hub production
+components:
+  schemas:
+    CreditBalance:
+      type: object
+      properties:
+        account_id:
+          type: string
+        balance:
+          type: number
+        currency:
+          type: string
+          example: USD
+        plan:
+          type: string
+        renews_at:
+          type: string
+          format: date-time
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+x-refined-from:
+- admin-openapi.yml
+- maxar-technologies-credits-api-openapi.yml

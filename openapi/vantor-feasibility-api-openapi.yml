@@ -1,0 +1,83 @@
+openapi: 3.2.0
+info:
+  title: Vantor Feasibility API
+  version: 1.0.0
+  description: 'Operations tagged Feasibility across 2 of this provider''s published API definitions: tasking-openapi.yml, maxar-technologies-feasibility-api-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.maxar.com/tasking/v1
+security:
+- bearerAuth: []
+tags:
+- name: Feasibility
+paths:
+  /feasibility:
+    post:
+      tags:
+      - Feasibility
+      summary: Check Tasking Feasibility
+      operationId: checkFeasibility
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeasibilityRequest'
+      responses:
+        '200':
+          description: Feasibility report
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Feasibility'
+    servers:
+    - url: https://api.maxar.com/tasking/v1
+components:
+  schemas:
+    Feasibility:
+      type: object
+      properties:
+        feasible:
+          type: boolean
+        windows:
+          type: array
+          items:
+            type: object
+            properties:
+              start:
+                type: string
+                format: date-time
+              end:
+                type: string
+                format: date-time
+              platform:
+                type: string
+              expected_cloud_cover:
+                type: number
+              expected_off_nadir:
+                type: number
+    FeasibilityRequest:
+      type: object
+      required:
+      - aoi
+      - start
+      - end
+      properties:
+        aoi:
+          type: object
+        start:
+          type: string
+          format: date-time
+        end:
+          type: string
+          format: date-time
+        platforms:
+          type: array
+          items:
+            type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+x-refined-from:
+- tasking-openapi.yml
+- maxar-technologies-feasibility-api-openapi.yml

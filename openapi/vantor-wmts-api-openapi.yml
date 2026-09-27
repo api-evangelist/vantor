@@ -1,0 +1,84 @@
+openapi: 3.2.0
+info:
+  title: Vantor WMTS API
+  version: 1.0.0
+  description: 'Operations tagged WMTS across 2 of this provider''s published API definitions: streaming-openapi.yml, maxar-technologies-wmts-api-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://securewatch.maxar.com/earthservice
+  description: Maxar SecureWatch
+security:
+- bearerAuth: []
+- apiKeyAuth: []
+tags:
+- name: WMTS
+paths:
+  /wmtsaccess:
+    get:
+      tags:
+      - WMTS
+      summary: WMTS GetCapabilities or GetTile
+      operationId: wmtsAccess
+      parameters:
+      - name: service
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - WMTS
+      - name: request
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - GetCapabilities
+          - GetTile
+      - name: layer
+        in: query
+        schema:
+          type: string
+      - name: tilematrixset
+        in: query
+        schema:
+          type: string
+          example: EPSG:3857
+      - name: tilematrix
+        in: query
+        schema:
+          type: string
+      - name: tilerow
+        in: query
+        schema:
+          type: integer
+      - name: tilecol
+        in: query
+        schema:
+          type: integer
+      - name: format
+        in: query
+        schema:
+          type: string
+          example: image/png
+      responses:
+        '200':
+          description: WMTS response
+          content:
+            image/png: {}
+            image/jpeg: {}
+            application/xml: {}
+    servers:
+    - url: https://securewatch.maxar.com/earthservice
+      description: Maxar SecureWatch
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+    apiKeyAuth:
+      type: apiKey
+      in: query
+      name: connectid
+x-refined-from:
+- streaming-openapi.yml
+- maxar-technologies-wmts-api-openapi.yml

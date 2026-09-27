@@ -1,0 +1,71 @@
+# x-archived-from: maxar-technologies-introspection-api-openapi.yml
+# x-archived-on: 2026-09-26
+openapi: 3.2.0
+info:
+  title: Vantor Hub Authentication Introspection API
+  description: Token-issuance service for Vantor Hub (formerly Maxar Developer Portal). Exchanges client credentials for bearer access tokens that authorize every other Hub API (Discovery, Account Services, Streaming). Documented at hub.vantor.com/docs/authentication. Profile derived by API Evangelist from Vantor Hub public docs; field shapes mirror common OAuth 2.0 client credentials and Maxar/MGP_SDK conventions and should be confirmed against live Vantor Hub responses before production use.
+  version: 1.0.0
+  contact:
+    name: Vantor Support
+    url: https://hub.vantor.com/docs/contact
+  license:
+    name: Vantor Hub Terms of Service
+    url: https://vantor.com/
+servers:
+- url: https://api.maxar.com
+  description: Vantor Hub production
+tags:
+- name: Introspection
+  description: Inspect tokens
+paths:
+  /auth/v1/introspect:
+    post:
+      tags:
+      - Introspection
+      summary: Introspect Token
+      description: Return active/inactive status and metadata for a token.
+      operationId: introspectToken
+      security:
+      - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - token
+              properties:
+                token:
+                  type: string
+      responses:
+        '200':
+          description: Token metadata
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Introspection'
+components:
+  schemas:
+    Introspection:
+      type: object
+      properties:
+        active:
+          type: boolean
+        client_id:
+          type: string
+        username:
+          type: string
+        scope:
+          type: string
+        exp:
+          type: integer
+        iat:
+          type: integer
+        sub:
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

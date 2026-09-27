@@ -1,0 +1,67 @@
+openapi: 3.2.0
+info:
+  title: Vantor Image API
+  version: 1.0.0
+  description: 'Operations tagged Image across 2 of this provider''s published API definitions: streaming-openapi.yml, maxar-technologies-image-api-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://securewatch.maxar.com/earthservice
+  description: Maxar SecureWatch
+security:
+- bearerAuth: []
+- apiKeyAuth: []
+tags:
+- name: Image
+paths:
+  /image:
+    get:
+      tags:
+      - Image
+      summary: Download Full Resolution Image
+      description: Download a full-resolution image of an area of interest, intersecting one or more catalog identifiers.
+      operationId: getImage
+      parameters:
+      - name: bbox
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: image_id
+        in: query
+        schema:
+          type: string
+      - name: format
+        in: query
+        schema:
+          type: string
+          enum:
+          - jpeg
+          - png
+          - geotiff
+          default: geotiff
+      - name: gsd
+        in: query
+        schema:
+          type: number
+          description: Ground sample distance in metres
+      responses:
+        '200':
+          description: Image binary
+          content:
+            image/tiff: {}
+            image/jpeg: {}
+            image/png: {}
+    servers:
+    - url: https://securewatch.maxar.com/earthservice
+      description: Maxar SecureWatch
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+    apiKeyAuth:
+      type: apiKey
+      in: query
+      name: connectid
+x-refined-from:
+- streaming-openapi.yml
+- maxar-technologies-image-api-openapi.yml

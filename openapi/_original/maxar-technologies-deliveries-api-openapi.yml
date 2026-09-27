@@ -1,0 +1,64 @@
+# x-archived-from: maxar-technologies-deliveries-api-openapi.yml
+# x-archived-on: 2026-09-26
+openapi: 3.2.0
+info:
+  title: Maxar Geospatial Platform Ordering Deliveries API
+  description: Order management API for placing, tracking and retrieving deliveries of Maxar archive imagery against WorldView, GeoEye and WorldView Legion sources. Profile derived from MGP_SDK `Interface.ordering` surface; field shapes follow common Maxar ordering conventions and should be confirmed against live responses.
+  version: 1.0.0
+servers:
+- url: https://api.maxar.com/order/v1
+security:
+- bearerAuth: []
+tags:
+- name: Deliveries
+paths:
+  /orders/{orderId}/deliveries:
+    get:
+      tags:
+      - Deliveries
+      summary: List Deliveries
+      operationId: listDeliveries
+      parameters:
+      - name: orderId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Deliveries
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Delivery'
+components:
+  schemas:
+    Delivery:
+      type: object
+      properties:
+        id:
+          type: string
+        order_id:
+          type: string
+        status:
+          type: string
+          enum:
+          - pending
+          - in_progress
+          - complete
+          - failed
+        url:
+          type: string
+        format:
+          type: string
+        size_bytes:
+          type: integer
+        delivered_at:
+          type: string
+          format: date-time
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer

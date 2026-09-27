@@ -1,0 +1,67 @@
+openapi: 3.2.0
+info:
+  title: Vantor Deliveries API
+  version: 1.0.0
+  description: 'Operations tagged Deliveries across 2 of this provider''s published API definitions: ordering-openapi.yml, maxar-technologies-deliveries-api-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.maxar.com/order/v1
+security:
+- bearerAuth: []
+tags:
+- name: Deliveries
+paths:
+  /orders/{orderId}/deliveries:
+    get:
+      tags:
+      - Deliveries
+      summary: List Deliveries
+      operationId: listDeliveries
+      parameters:
+      - name: orderId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Deliveries
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Delivery'
+    servers:
+    - url: https://api.maxar.com/order/v1
+components:
+  schemas:
+    Delivery:
+      type: object
+      properties:
+        id:
+          type: string
+        order_id:
+          type: string
+        status:
+          type: string
+          enum:
+          - pending
+          - in_progress
+          - complete
+          - failed
+        url:
+          type: string
+        format:
+          type: string
+        size_bytes:
+          type: integer
+        delivered_at:
+          type: string
+          format: date-time
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+x-refined-from:
+- ordering-openapi.yml
+- maxar-technologies-deliveries-api-openapi.yml

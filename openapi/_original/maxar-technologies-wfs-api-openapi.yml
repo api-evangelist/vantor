@@ -1,0 +1,76 @@
+# x-archived-from: maxar-technologies-wfs-api-openapi.yml
+# x-archived-on: 2026-09-26
+openapi: 3.2.0
+info:
+  title: Maxar Geospatial Platform Streaming WFS API
+  description: 'OGC Streaming services exposing Maxar''s current and historical imagery as WMS, WMTS and WFS layers — implemented behind securewatch.maxar.com and surfaced through the MGP_SDK Python, Java and R clients. Profile derived from the MGP_SDK README ("Open Geospatial Consortium standard protocols: WFS, WMS, WMTS"); endpoint paths follow standard OGC URL patterns.'
+  version: 1.0.0
+servers:
+- url: https://securewatch.maxar.com/earthservice
+  description: Maxar SecureWatch
+security:
+- bearerAuth: []
+- apiKeyAuth: []
+tags:
+- name: WFS
+paths:
+  /wfsaccess:
+    get:
+      tags:
+      - WFS
+      summary: WFS GetCapabilities or GetFeature
+      operationId: wfsAccess
+      parameters:
+      - name: service
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - WFS
+      - name: request
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - GetCapabilities
+          - GetFeature
+          - DescribeFeatureType
+      - name: version
+        in: query
+        schema:
+          type: string
+          default: 2.0.0
+      - name: typeNames
+        in: query
+        schema:
+          type: string
+      - name: bbox
+        in: query
+        schema:
+          type: string
+      - name: outputFormat
+        in: query
+        schema:
+          type: string
+          example: application/json
+      - name: count
+        in: query
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: WFS response
+          content:
+            application/json: {}
+            application/xml: {}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+    apiKeyAuth:
+      type: apiKey
+      in: query
+      name: connectid
