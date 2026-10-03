@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  title: Vantor Feasibility API
+  title: Maxar Geospatial Platform Tasking Feasibility API
+  description: Real-time tasking API for commissioning new satellite collections against the Vantor Constellation — WorldView-1/2/3, GeoEye-1 and the six-satellite WorldView Legion next-generation fleet launched 2024-2026. Profile derived from MGP_SDK `Interface.tasking` surface and Vantor public product descriptions; field shapes follow common Maxar tasking conventions.
   version: 1.0.0
-  description: 'Operations tagged Feasibility across 2 of this provider''s published API definitions: tasking-openapi.yml, maxar-technologies-feasibility-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://api.maxar.com/tasking/v1
 security:
@@ -29,10 +29,27 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Feasibility'
-    servers:
-    - url: https://api.maxar.com/tasking/v1
 components:
   schemas:
+    FeasibilityRequest:
+      type: object
+      required:
+      - aoi
+      - start
+      - end
+      properties:
+        aoi:
+          type: object
+        start:
+          type: string
+          format: date-time
+        end:
+          type: string
+          format: date-time
+        platforms:
+          type: array
+          items:
+            type: string
     Feasibility:
       type: object
       properties:
@@ -55,29 +72,7 @@ components:
                 type: number
               expected_off_nadir:
                 type: number
-    FeasibilityRequest:
-      type: object
-      required:
-      - aoi
-      - start
-      - end
-      properties:
-        aoi:
-          type: object
-        start:
-          type: string
-          format: date-time
-        end:
-          type: string
-          format: date-time
-        platforms:
-          type: array
-          items:
-            type: string
   securitySchemes:
     bearerAuth:
       type: http
       scheme: bearer
-x-refined-from:
-- tasking-openapi.yml
-- maxar-technologies-feasibility-api-openapi.yml

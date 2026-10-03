@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  title: Vantor Monitors API
+  title: Maxar Geospatial Platform Monitoring Monitors API
+  description: Monitoring API for standing watches over user-defined areas of interest — receive notifications when new imagery is collected, when collection windows close and when analytic detections fire. Profile derived from MGP_SDK `Interface.monitoring` surface; field shapes follow common Maxar monitoring conventions.
   version: 1.0.0
-  description: 'Operations tagged Monitors across 2 of this provider''s published API definitions: monitoring-openapi.yml, maxar-technologies-monitors-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://api.maxar.com/monitoring/v1
 security:
@@ -43,8 +43,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Monitor'
-    servers:
-    - url: https://api.maxar.com/monitoring/v1
   /monitors/{monitorId}:
     get:
       tags:
@@ -78,27 +76,8 @@ paths:
       responses:
         '204':
           description: Deleted
-    servers:
-    - url: https://api.maxar.com/monitoring/v1
 components:
   schemas:
-    Monitor:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        status:
-          type: string
-          enum:
-          - active
-          - paused
-        created_at:
-          type: string
-          format: date-time
-        cadence:
-          type: string
     MonitorRequest:
       type: object
       required:
@@ -124,10 +103,24 @@ components:
               type: array
               items:
                 type: string
+    Monitor:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
+          enum:
+          - active
+          - paused
+        created_at:
+          type: string
+          format: date-time
+        cadence:
+          type: string
   securitySchemes:
     bearerAuth:
       type: http
       scheme: bearer
-x-refined-from:
-- monitoring-openapi.yml
-- maxar-technologies-monitors-api-openapi.yml

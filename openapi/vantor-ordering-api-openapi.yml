@@ -168,6 +168,15 @@ components:
           type: array
           items:
             type: object
+    Pipeline:
+      type: object
+      properties:
+        pipeline_id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
     OrderRequest:
       type: object
       properties:
@@ -181,15 +190,6 @@ components:
           type: object
         notification:
           type: object
-    Pipeline:
-      type: object
-      properties:
-        pipeline_id:
-          type: string
-        name:
-          type: string
-        description:
-          type: string
   securitySchemes:
     bearerAuth:
       type: http

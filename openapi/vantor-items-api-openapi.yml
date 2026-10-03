@@ -1,11 +1,11 @@
 openapi: 3.2.0
 info:
-  title: Vantor Items API
+  title: Vantor Hub Discovery Items API
+  description: Search and discovery API across Vantor Hub's "125+ petabytes of imagery and derivatives" — WorldView, GeoEye, WorldView Legion archive imagery plus Vivid basemaps and derivative analytic products.
   version: 1.0.0
   contact:
     name: Vantor Support
     url: https://hub.vantor.com/docs/contact
-  description: 'Operations tagged Items across 2 of this provider''s published API definitions: discovery-openapi.yml, maxar-technologies-items-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://api.maxar.com/discovery/v1
   description: Vantor Hub Discovery production
@@ -50,9 +50,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ItemCollection'
-    servers:
-    - url: https://api.maxar.com/discovery/v1
-      description: Vantor Hub Discovery production
   /collections/{collectionId}/items/{itemId}:
     get:
       tags:
@@ -78,26 +75,52 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Item'
-    servers:
-    - url: https://api.maxar.com/discovery/v1
-      description: Vantor Hub Discovery production
 components:
   schemas:
-    Asset:
+    ItemProperties:
       type: object
-      required:
-      - href
       properties:
-        href:
+        datetime:
           type: string
-        type:
+          format: date-time
+        platform:
           type: string
-        roles:
+          example: WorldView-3
+        instruments:
           type: array
           items:
             type: string
-        title:
+        gsd:
+          type: number
+          description: Ground sample distance in metres
+        cloud_cover:
+          type: number
+        off_nadir:
+          type: number
+        sun_elevation:
+          type: number
+    ItemCollection:
+      type: object
+      required:
+      - type
+      - features
+      properties:
+        type:
           type: string
+          enum:
+          - FeatureCollection
+        features:
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/Link'
+        numberReturned:
+          type: integer
+        numberMatched:
+          type: integer
     Link:
       type: object
       required:
@@ -146,55 +169,23 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Link'
-    ItemProperties:
+    Asset:
       type: object
+      required:
+      - href
       properties:
-        datetime:
+        href:
           type: string
-          format: date-time
-        platform:
+        type:
           type: string
-          example: WorldView-3
-        instruments:
+        roles:
           type: array
           items:
             type: string
-        gsd:
-          type: number
-          description: Ground sample distance in metres
-        cloud_cover:
-          type: number
-        off_nadir:
-          type: number
-        sun_elevation:
-          type: number
-    ItemCollection:
-      type: object
-      required:
-      - type
-      - features
-      properties:
-        type:
+        title:
           type: string
-          enum:
-          - FeatureCollection
-        features:
-          type: array
-          items:
-            $ref: '#/components/schemas/Item'
-        links:
-          type: array
-          items:
-            $ref: '#/components/schemas/Link'
-        numberReturned:
-          type: integer
-        numberMatched:
-          type: integer
   securitySchemes:
     bearerAuth:
       type: http
       scheme: bearer
       bearerFormat: JWT
-x-refined-from:
-- discovery-openapi.yml
-- maxar-technologies-items-api-openapi.yml

@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  title: Vantor Users API
+  title: Vantor Hub Account Services Users API
+  description: Administrative account-management API for Vantor Hub customers — manage users, roles, organisation entitlements, credit balances and API keys. Profile derived from public Vantor Hub docs (hub.vantor.com/docs/admin) and Maxar Geospatial Platform `account_service` SDK conventions; field shapes should be confirmed against live Hub responses.
   version: 1.0.0
-  description: 'Operations tagged Users across 2 of this provider''s published API definitions: admin-openapi.yml, maxar-technologies-users-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://api.maxar.com/admin/v1
   description: Vantor Hub production
@@ -56,9 +56,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
-    servers:
-    - url: https://api.maxar.com/admin/v1
-      description: Vantor Hub production
   /accounts/{accountId}/users/{userId}:
     get:
       tags:
@@ -102,9 +99,6 @@ paths:
       responses:
         '204':
           description: Removed
-    servers:
-    - url: https://api.maxar.com/admin/v1
-      description: Vantor Hub production
 components:
   schemas:
     InviteUserRequest:
@@ -151,6 +145,3 @@ components:
       type: http
       scheme: bearer
       bearerFormat: JWT
-x-refined-from:
-- admin-openapi.yml
-- maxar-technologies-users-api-openapi.yml

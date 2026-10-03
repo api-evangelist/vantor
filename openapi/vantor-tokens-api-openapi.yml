@@ -1,6 +1,7 @@
 openapi: 3.2.0
 info:
-  title: Vantor Tokens API
+  title: Vantor Hub Authentication Tokens API
+  description: Token-issuance service for Vantor Hub (formerly Maxar Developer Portal). Exchanges client credentials for bearer access tokens that authorize every other Hub API (Discovery, Account Services, Streaming). Documented at hub.vantor.com/docs/authentication. Profile derived by API Evangelist from Vantor Hub public docs; field shapes mirror common OAuth 2.0 client credentials and Maxar/MGP_SDK conventions and should be confirmed against live Vantor Hub responses before production use.
   version: 1.0.0
   contact:
     name: Vantor Support
@@ -8,7 +9,6 @@ info:
   license:
     name: Vantor Hub Terms of Service
     url: https://vantor.com/
-  description: 'Operations tagged Tokens across 2 of this provider''s published API definitions: authentication-openapi.yml, maxar-technologies-tokens-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://api.maxar.com
   description: Vantor Hub production
@@ -48,9 +48,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-    servers:
-    - url: https://api.maxar.com
-      description: Vantor Hub production
   /auth/v1/token/refresh:
     post:
       tags:
@@ -78,9 +75,6 @@ paths:
                 $ref: '#/components/schemas/TokenResponse'
         '401':
           description: Invalid refresh token
-    servers:
-    - url: https://api.maxar.com
-      description: Vantor Hub production
   /auth/v1/token/revoke:
     post:
       tags:
@@ -107,18 +101,8 @@ paths:
       responses:
         '200':
           description: Token revoked
-    servers:
-    - url: https://api.maxar.com
-      description: Vantor Hub production
 components:
   schemas:
-    Error:
-      type: object
-      properties:
-        error:
-          type: string
-        error_description:
-          type: string
     TokenRequest:
       type: object
       required:
@@ -162,11 +146,15 @@ components:
           type: string
         scope:
           type: string
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        error_description:
+          type: string
   securitySchemes:
     bearerAuth:
       type: http
       scheme: bearer
       bearerFormat: JWT
-x-refined-from:
-- authentication-openapi.yml
-- maxar-technologies-tokens-api-openapi.yml

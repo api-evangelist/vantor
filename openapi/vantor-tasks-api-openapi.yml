@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  title: Vantor Tasks API
+  title: Maxar Geospatial Platform Tasking Tasks API
+  description: Real-time tasking API for commissioning new satellite collections against the Vantor Constellation — WorldView-1/2/3, GeoEye-1 and the six-satellite WorldView Legion next-generation fleet launched 2024-2026. Profile derived from MGP_SDK `Interface.tasking` surface and Vantor public product descriptions; field shapes follow common Maxar tasking conventions.
   version: 1.0.0
-  description: 'Operations tagged Tasks across 2 of this provider''s published API definitions: tasking-openapi.yml, maxar-technologies-tasks-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://api.maxar.com/tasking/v1
 security:
@@ -60,8 +60,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Task'
-    servers:
-    - url: https://api.maxar.com/tasking/v1
   /tasks/{taskId}:
     get:
       tags:
@@ -95,8 +93,6 @@ paths:
       responses:
         '204':
           description: Cancelled
-    servers:
-    - url: https://api.maxar.com/tasking/v1
 components:
   schemas:
     TaskRequest:
@@ -178,6 +174,3 @@ components:
     bearerAuth:
       type: http
       scheme: bearer
-x-refined-from:
-- tasking-openapi.yml
-- maxar-technologies-tasks-api-openapi.yml

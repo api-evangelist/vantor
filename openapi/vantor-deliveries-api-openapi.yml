@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  title: Vantor Deliveries API
+  title: Maxar Geospatial Platform Ordering Deliveries API
+  description: Order management API for placing, tracking and retrieving deliveries of Maxar archive imagery against WorldView, GeoEye and WorldView Legion sources. Profile derived from MGP_SDK `Interface.ordering` surface; field shapes follow common Maxar ordering conventions and should be confirmed against live responses.
   version: 1.0.0
-  description: 'Operations tagged Deliveries across 2 of this provider''s published API definitions: ordering-openapi.yml, maxar-technologies-deliveries-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://api.maxar.com/order/v1
 security:
@@ -31,8 +31,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Delivery'
-    servers:
-    - url: https://api.maxar.com/order/v1
 components:
   schemas:
     Delivery:
@@ -62,6 +60,3 @@ components:
     bearerAuth:
       type: http
       scheme: bearer
-x-refined-from:
-- ordering-openapi.yml
-- maxar-technologies-deliveries-api-openapi.yml

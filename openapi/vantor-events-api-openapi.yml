@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  title: Vantor Events API
+  title: Maxar Geospatial Platform Monitoring Events API
+  description: Monitoring API for standing watches over user-defined areas of interest — receive notifications when new imagery is collected, when collection windows close and when analytic detections fire. Profile derived from MGP_SDK `Interface.monitoring` surface; field shapes follow common Maxar monitoring conventions.
   version: 1.0.0
-  description: 'Operations tagged Events across 2 of this provider''s published API definitions: monitoring-openapi.yml, maxar-technologies-events-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://api.maxar.com/monitoring/v1
 security:
@@ -41,8 +41,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Event'
-    servers:
-    - url: https://api.maxar.com/monitoring/v1
 components:
   schemas:
     Event:
@@ -67,6 +65,3 @@ components:
     bearerAuth:
       type: http
       scheme: bearer
-x-refined-from:
-- monitoring-openapi.yml
-- maxar-technologies-events-api-openapi.yml

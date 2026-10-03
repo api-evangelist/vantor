@@ -1,11 +1,11 @@
 openapi: 3.2.0
 info:
-  title: Vantor Search API
+  title: Vantor Hub Discovery Search API
+  description: Search and discovery API across Vantor Hub's "125+ petabytes of imagery and derivatives" — WorldView, GeoEye, WorldView Legion archive imagery plus Vivid basemaps and derivative analytic products.
   version: 1.0.0
   contact:
     name: Vantor Support
     url: https://hub.vantor.com/docs/contact
-  description: 'Operations tagged Search across 2 of this provider''s published API definitions: discovery-openapi.yml, maxar-technologies-search-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://api.maxar.com/discovery/v1
   description: Vantor Hub Discovery production
@@ -78,40 +78,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ItemCollection'
-    servers:
-    - url: https://api.maxar.com/discovery/v1
-      description: Vantor Hub Discovery production
 components:
   schemas:
-    Asset:
-      type: object
-      required:
-      - href
-      properties:
-        href:
-          type: string
-        type:
-          type: string
-        roles:
-          type: array
-          items:
-            type: string
-        title:
-          type: string
-    Link:
-      type: object
-      required:
-      - href
-      - rel
-      properties:
-        href:
-          type: string
-        rel:
-          type: string
-        type:
-          type: string
-        title:
-          type: string
     SearchRequest:
       type: object
       properties:
@@ -141,40 +109,6 @@ components:
         query:
           type: object
           description: Property filters (cloud_cover, off_nadir, gsd, etc)
-    Item:
-      type: object
-      required:
-      - type
-      - id
-      - geometry
-      - properties
-      properties:
-        type:
-          type: string
-          enum:
-          - Feature
-        stac_version:
-          type: string
-        id:
-          type: string
-        collection:
-          type: string
-        bbox:
-          type: array
-          items:
-            type: number
-        geometry:
-          type: object
-        properties:
-          $ref: '#/components/schemas/ItemProperties'
-        assets:
-          type: object
-          additionalProperties:
-            $ref: '#/components/schemas/Asset'
-        links:
-          type: array
-          items:
-            $ref: '#/components/schemas/Link'
     ItemProperties:
       type: object
       properties:
@@ -219,11 +153,71 @@ components:
           type: integer
         numberMatched:
           type: integer
+    Link:
+      type: object
+      required:
+      - href
+      - rel
+      properties:
+        href:
+          type: string
+        rel:
+          type: string
+        type:
+          type: string
+        title:
+          type: string
+    Item:
+      type: object
+      required:
+      - type
+      - id
+      - geometry
+      - properties
+      properties:
+        type:
+          type: string
+          enum:
+          - Feature
+        stac_version:
+          type: string
+        id:
+          type: string
+        collection:
+          type: string
+        bbox:
+          type: array
+          items:
+            type: number
+        geometry:
+          type: object
+        properties:
+          $ref: '#/components/schemas/ItemProperties'
+        assets:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/Asset'
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/Link'
+    Asset:
+      type: object
+      required:
+      - href
+      properties:
+        href:
+          type: string
+        type:
+          type: string
+        roles:
+          type: array
+          items:
+            type: string
+        title:
+          type: string
   securitySchemes:
     bearerAuth:
       type: http
       scheme: bearer
       bearerFormat: JWT
-x-refined-from:
-- discovery-openapi.yml
-- maxar-technologies-search-api-openapi.yml
