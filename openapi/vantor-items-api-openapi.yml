@@ -99,28 +99,6 @@ components:
           type: number
         sun_elevation:
           type: number
-    ItemCollection:
-      type: object
-      required:
-      - type
-      - features
-      properties:
-        type:
-          type: string
-          enum:
-          - FeatureCollection
-        features:
-          type: array
-          items:
-            $ref: '#/components/schemas/Item'
-        links:
-          type: array
-          items:
-            $ref: '#/components/schemas/Link'
-        numberReturned:
-          type: integer
-        numberMatched:
-          type: integer
     Link:
       type: object
       required:
@@ -133,6 +111,21 @@ components:
           type: string
         type:
           type: string
+        title:
+          type: string
+    Asset:
+      type: object
+      required:
+      - href
+      properties:
+        href:
+          type: string
+        type:
+          type: string
+        roles:
+          type: array
+          items:
+            type: string
         title:
           type: string
     Item:
@@ -169,21 +162,28 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Link'
-    Asset:
+    ItemCollection:
       type: object
       required:
-      - href
+      - type
+      - features
       properties:
-        href:
-          type: string
         type:
           type: string
-        roles:
+          enum:
+          - FeatureCollection
+        features:
           type: array
           items:
-            type: string
-        title:
-          type: string
+            $ref: '#/components/schemas/Item'
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/Link'
+        numberReturned:
+          type: integer
+        numberMatched:
+          type: integer
   securitySchemes:
     bearerAuth:
       type: http

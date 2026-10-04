@@ -141,6 +141,25 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    SearchRequest:
+      type: object
+      properties:
+        collections:
+          type: array
+          items:
+            type: string
+        bbox:
+          type: array
+          items:
+            type: number
+        datetime:
+          type: string
+        intersects:
+          type: object
+        limit:
+          type: integer
+        query:
+          type: object
     StacItem:
       type: object
       properties:
@@ -166,25 +185,6 @@ components:
           type: array
           items:
             type: object
-    SearchRequest:
-      type: object
-      properties:
-        collections:
-          type: array
-          items:
-            type: string
-        bbox:
-          type: array
-          items:
-            type: number
-        datetime:
-          type: string
-        intersects:
-          type: object
-        limit:
-          type: integer
-        query:
-          type: object
     StacItemCollection:
       type: object
       properties:

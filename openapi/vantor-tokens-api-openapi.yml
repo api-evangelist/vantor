@@ -103,6 +103,13 @@ paths:
           description: Token revoked
 components:
   schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        error_description:
+          type: string
     TokenRequest:
       type: object
       required:
@@ -145,13 +152,6 @@ components:
         refresh_token:
           type: string
         scope:
-          type: string
-    Error:
-      type: object
-      properties:
-        error:
-          type: string
-        error_description:
           type: string
   securitySchemes:
     bearerAuth:

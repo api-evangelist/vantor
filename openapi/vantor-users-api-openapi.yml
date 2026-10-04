@@ -101,21 +101,6 @@ paths:
           description: Removed
 components:
   schemas:
-    InviteUserRequest:
-      type: object
-      required:
-      - email
-      - role
-      properties:
-        email:
-          type: string
-          format: email
-        role:
-          type: string
-          enum:
-          - Admin
-          - Member
-          - Viewer
     User:
       type: object
       properties:
@@ -140,6 +125,21 @@ components:
         created_at:
           type: string
           format: date-time
+    InviteUserRequest:
+      type: object
+      required:
+      - email
+      - role
+      properties:
+        email:
+          type: string
+          format: email
+        role:
+          type: string
+          enum:
+          - Admin
+          - Member
+          - Viewer
   securitySchemes:
     bearerAuth:
       type: http

@@ -94,40 +94,6 @@ paths:
           description: Cancelled
 components:
   schemas:
-    Order:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        status:
-          type: string
-          enum:
-          - pending
-          - in_progress
-          - complete
-          - failed
-          - cancelled
-        created_at:
-          type: string
-          format: date-time
-        updated_at:
-          type: string
-          format: date-time
-        cost:
-          type: number
-        currency:
-          type: string
-        items:
-          type: array
-          items:
-            type: object
-            properties:
-              catalog_id:
-                type: string
-              status:
-                type: string
     OrderRequest:
       type: object
       required:
@@ -165,6 +131,40 @@ components:
           - geotiff
           - jpeg2000
           - nitf
+    Order:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
+          enum:
+          - pending
+          - in_progress
+          - complete
+          - failed
+          - cancelled
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+        cost:
+          type: number
+        currency:
+          type: string
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              catalog_id:
+                type: string
+              status:
+                type: string
   securitySchemes:
     bearerAuth:
       type: http

@@ -80,6 +80,57 @@ paths:
                 $ref: '#/components/schemas/ItemCollection'
 components:
   schemas:
+    ItemProperties:
+      type: object
+      properties:
+        datetime:
+          type: string
+          format: date-time
+        platform:
+          type: string
+          example: WorldView-3
+        instruments:
+          type: array
+          items:
+            type: string
+        gsd:
+          type: number
+          description: Ground sample distance in metres
+        cloud_cover:
+          type: number
+        off_nadir:
+          type: number
+        sun_elevation:
+          type: number
+    Link:
+      type: object
+      required:
+      - href
+      - rel
+      properties:
+        href:
+          type: string
+        rel:
+          type: string
+        type:
+          type: string
+        title:
+          type: string
+    Asset:
+      type: object
+      required:
+      - href
+      properties:
+        href:
+          type: string
+        type:
+          type: string
+        roles:
+          type: array
+          items:
+            type: string
+        title:
+          type: string
     SearchRequest:
       type: object
       properties:
@@ -109,64 +160,6 @@ components:
         query:
           type: object
           description: Property filters (cloud_cover, off_nadir, gsd, etc)
-    ItemProperties:
-      type: object
-      properties:
-        datetime:
-          type: string
-          format: date-time
-        platform:
-          type: string
-          example: WorldView-3
-        instruments:
-          type: array
-          items:
-            type: string
-        gsd:
-          type: number
-          description: Ground sample distance in metres
-        cloud_cover:
-          type: number
-        off_nadir:
-          type: number
-        sun_elevation:
-          type: number
-    ItemCollection:
-      type: object
-      required:
-      - type
-      - features
-      properties:
-        type:
-          type: string
-          enum:
-          - FeatureCollection
-        features:
-          type: array
-          items:
-            $ref: '#/components/schemas/Item'
-        links:
-          type: array
-          items:
-            $ref: '#/components/schemas/Link'
-        numberReturned:
-          type: integer
-        numberMatched:
-          type: integer
-    Link:
-      type: object
-      required:
-      - href
-      - rel
-      properties:
-        href:
-          type: string
-        rel:
-          type: string
-        type:
-          type: string
-        title:
-          type: string
     Item:
       type: object
       required:
@@ -201,21 +194,28 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Link'
-    Asset:
+    ItemCollection:
       type: object
       required:
-      - href
+      - type
+      - features
       properties:
-        href:
-          type: string
         type:
           type: string
-        roles:
+          enum:
+          - FeatureCollection
+        features:
           type: array
           items:
-            type: string
-        title:
-          type: string
+            $ref: '#/components/schemas/Item'
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/Link'
+        numberReturned:
+          type: integer
+        numberMatched:
+          type: integer
   securitySchemes:
     bearerAuth:
       type: http
