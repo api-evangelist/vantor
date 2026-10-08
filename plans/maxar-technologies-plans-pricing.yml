@@ -71,3 +71,33 @@ verbatimQuotes:
     quote: "90% of foundational geospatial intelligence used by the U.S. Government is powered by Vantor"
   - source: https://hub.vantor.com/
     quote: "Explore documentation, references, and tools: everything you need to start using the Hub APIs today."
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Maxar Open Data
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Vantor Hub Trial / Free Tier
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Maxar Geospatial Platform (Commercial)
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Government & Defense Programs
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
