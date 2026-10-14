@@ -1,0 +1,17 @@
+fetched: '2026-10-14'
+method: fetched
+source: https://developers.maxar.com/docs/streaming-imagery/
+page: https://developers.maxar.com/docs/streaming-imagery/
+file: vantor-ogc-1.md
+bytes: 1379
+sha256: 0df02b92e90f8dc6fee38e80aa6dbcbfeea4666121d3d282b27ec6e807c48412
+anchor: ogc
+shape: ogc
+shapes_declared:
+- ogc-wfs
+- ogc-wms
+- ogc-wmts
+classification: declares-compatibility
+quote: Use the Streaming - Imagery API to stream image strips from the Online Catalog and view their metadata. This
+  API supports the Open Geospatial Consortium (OGC) API services WFS, WMS, and WMTS.
+note: text extracted from the provider's own page (tags stripped), saved for evidence

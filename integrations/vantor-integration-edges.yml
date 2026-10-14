@@ -1,0 +1,51 @@
+edges:
+- partner_name: Open Geospatial Consortium
+  partner: ogc
+  detected_by: sweep-geospatial.py
+  first_seen: '2026-10-14'
+  partner_match: shape-anchor
+  type: docs
+  direction: provider-built
+  channel: provider-built
+  relationship: compatible
+  shape: ogc-wmts
+  evidence_kind: own-docs
+  evidence: https://developers.maxar.com/docs/streaming-imagery/
+  degree: declared-unqualified
+  quote: Use the Streaming - Imagery API to stream image strips from the Online Catalog and view their metadata.
+    This API supports the Open Geospatial Consortium (OGC) API services WFS, WMS, and WMTS.
+  evidence_file: https://github.com/api-evangelist/vantor/blob/main/evidence/compatibility/vantor-ogc-1.md
+- partner_name: Open Geospatial Consortium
+  partner: ogc
+  detected_by: sweep-geospatial.py
+  first_seen: '2026-10-14'
+  partner_match: shape-anchor
+  type: docs
+  direction: provider-built
+  channel: provider-built
+  relationship: compatible
+  shape: ogc-wms
+  evidence_kind: own-docs
+  evidence: https://developers.maxar.com/docs/streaming-imagery/
+  degree: declared-unqualified
+  quote: Use the Streaming - Imagery API to stream image strips from the Online Catalog and view their metadata.
+    This API supports the Open Geospatial Consortium (OGC) API services WFS, WMS, and WMTS.
+  evidence_file: https://github.com/api-evangelist/vantor/blob/main/evidence/compatibility/vantor-ogc-1.md
+- partner_name: Open Geospatial Consortium
+  partner: ogc
+  detected_by: sweep-geospatial.py
+  first_seen: '2026-10-14'
+  partner_match: shape-anchor
+  type: docs
+  direction: provider-built
+  channel: provider-built
+  relationship: compatible
+  shape: ogc-wfs
+  evidence_kind: own-docs
+  evidence: https://developers.maxar.com/docs/streaming-imagery/
+  degree: declared-unqualified
+  quote: Use the Streaming - Imagery API to stream image strips from the Online Catalog and view their metadata.
+    This API supports the Open Geospatial Consortium (OGC) API services WFS, WMS, and WMTS.
+  evidence_file: https://github.com/api-evangelist/vantor/blob/main/evidence/compatibility/vantor-ogc-1.md
+generated: '2026-10-14'
+method: searched
