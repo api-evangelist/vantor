@@ -102,35 +102,6 @@ components:
           type: number
         sun_elevation:
           type: number
-    Link:
-      type: object
-      required:
-      - href
-      - rel
-      properties:
-        href:
-          type: string
-        rel:
-          type: string
-        type:
-          type: string
-        title:
-          type: string
-    Asset:
-      type: object
-      required:
-      - href
-      properties:
-        href:
-          type: string
-        type:
-          type: string
-        roles:
-          type: array
-          items:
-            type: string
-        title:
-          type: string
     SearchRequest:
       type: object
       properties:
@@ -160,6 +131,20 @@ components:
         query:
           type: object
           description: Property filters (cloud_cover, off_nadir, gsd, etc)
+    Link:
+      type: object
+      required:
+      - href
+      - rel
+      properties:
+        href:
+          type: string
+        rel:
+          type: string
+        type:
+          type: string
+        title:
+          type: string
     Item:
       type: object
       required:
@@ -194,6 +179,21 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Link'
+    Asset:
+      type: object
+      required:
+      - href
+      properties:
+        href:
+          type: string
+        type:
+          type: string
+        roles:
+          type: array
+          items:
+            type: string
+        title:
+          type: string
     ItemCollection:
       type: object
       required:

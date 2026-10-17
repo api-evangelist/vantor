@@ -150,6 +150,24 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Order:
+      type: object
+      properties:
+        order_id:
+          type: string
+        pipeline_id:
+          type: string
+        status:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        delivery:
+          type: object
+        items:
+          type: array
+          items:
+            type: object
     OrderRequest:
       type: object
       properties:
@@ -172,24 +190,6 @@ components:
           type: string
         description:
           type: string
-    Order:
-      type: object
-      properties:
-        order_id:
-          type: string
-        pipeline_id:
-          type: string
-        status:
-          type: string
-        created_at:
-          type: string
-          format: date-time
-        delivery:
-          type: object
-        items:
-          type: array
-          items:
-            type: object
   securitySchemes:
     bearerAuth:
       type: http

@@ -113,21 +113,6 @@ components:
           type: string
         title:
           type: string
-    Asset:
-      type: object
-      required:
-      - href
-      properties:
-        href:
-          type: string
-        type:
-          type: string
-        roles:
-          type: array
-          items:
-            type: string
-        title:
-          type: string
     Item:
       type: object
       required:
@@ -162,6 +147,21 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Link'
+    Asset:
+      type: object
+      required:
+      - href
+      properties:
+        href:
+          type: string
+        type:
+          type: string
+        roles:
+          type: array
+          items:
+            type: string
+        title:
+          type: string
     ItemCollection:
       type: object
       required:

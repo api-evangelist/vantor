@@ -103,6 +103,25 @@ paths:
           description: Token revoked
 components:
   schemas:
+    TokenResponse:
+      type: object
+      required:
+      - access_token
+      - token_type
+      - expires_in
+      properties:
+        access_token:
+          type: string
+        token_type:
+          type: string
+          example: Bearer
+        expires_in:
+          type: integer
+          example: 3600
+        refresh_token:
+          type: string
+        scope:
+          type: string
     Error:
       type: object
       properties:
@@ -130,25 +149,6 @@ components:
         password:
           type: string
           format: password
-        refresh_token:
-          type: string
-        scope:
-          type: string
-    TokenResponse:
-      type: object
-      required:
-      - access_token
-      - token_type
-      - expires_in
-      properties:
-        access_token:
-          type: string
-        token_type:
-          type: string
-          example: Bearer
-        expires_in:
-          type: integer
-          example: 3600
         refresh_token:
           type: string
         scope:
