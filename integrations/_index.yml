@@ -14,3 +14,30 @@
   relationship: compatible
   status: not-a-workflow
   arazzo: null
+- slug: vantor-registry-of-open-data-on-aws
+  label: Registry of Open Data on AWS
+  partner_name: Registry of Open Data on AWS
+  category: public earth-observation data register
+  type: register
+  channel: standard-directory
+  evidence: https://registry.opendata.aws/vantor-open-data/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Registry of Open Data on AWS (registry.opendata.aws; source github.com/awslabs/open-data-registry)
+    standard: null
+    spec_file: null
+    role: aws-open-data-manager
+    registered_name: Vantor
+    register_id: https://registry.opendata.aws/vantor-open-data/
+    matched_domain: vantor.com
+    matched_by: domain
+    domain_source: ManagedBy link
+    datasets:
+    - vantor-open-data
+    signal_note: 'participation only: manages earth-observation datasets listed on the registry; datasets are context,
+      never counted'
+    detected_by: sweep-space-satellite.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null

@@ -47,5 +47,40 @@ edges:
   quote: Use the Streaming - Imagery API to stream image strips from the Online Catalog and view their metadata.
     This API supports the Open Geospatial Consortium (OGC) API services WFS, WMS, and WMTS.
   evidence_file: https://github.com/api-evangelist/vantor/blob/main/evidence/compatibility/vantor-ogc-1.md
+- partner_name: Registry of Open Data on AWS
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.opendata.aws/vantor-open-data/
+  category: public earth-observation data register
+  contract_reference:
+    register: Registry of Open Data on AWS (registry.opendata.aws; source github.com/awslabs/open-data-registry)
+    standard: null
+    spec_file: null
+    role: aws-open-data-manager
+    registered_name: Vantor
+    register_id: https://registry.opendata.aws/vantor-open-data/
+    matched_domain: vantor.com
+    matched_by: domain
+    domain_source: ManagedBy link
+    datasets:
+    - vantor-open-data
+    signal_note: 'participation only: manages earth-observation datasets listed on the registry; datasets are context,
+      never counted'
+    detected_by: sweep-space-satellite.py
+    detected: '2026-10-20'
+  detected_by: sweep-space-satellite.py
+  first_seen: '2026-10-20'
 generated: '2026-10-14'
 method: searched
+source:
+- https://www.fcc.gov/sites/default/files/ssal.xlsx
+- https://stacindex.org/api/catalogs
+- https://registry.opendata.aws/
+checked:
+- https://registry.opendata.aws/
+- https://stacindex.org/api/catalogs
+- https://www.fcc.gov/sites/default/files/ssal.xlsx
