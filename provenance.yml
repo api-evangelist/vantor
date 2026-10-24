@@ -15,6 +15,9 @@ artifacts:
   capabilities/maxar-technologies-capability-edges.yml:
     method: unknown
     evidence: no authorship recorded
+  capabilities/vantor-capability-edges.yml:
+    method: unknown
+    evidence: no authorship recorded
   collections/admin.opencollection.json:
     method: unknown
     evidence: no authorship recorded
@@ -34,131 +37,131 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   collections/maxar-technologies-accounts-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-accounts-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-accounts-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-accounts-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-api-keys-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-api-keys-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-api-keys-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-api-keys-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-collections-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-collections-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-collections-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-collections-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-credits-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-credits-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-credits-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-credits-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-deliveries-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-deliveries-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-deliveries-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-deliveries-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-estimates-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-estimates-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-estimates-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-estimates-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-events-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-events-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-events-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-events-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-feasibility-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-feasibility-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-feasibility-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-feasibility-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-image-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-image-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-image-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-image-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-introspection-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-introspection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-introspection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-introspection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-items-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-items-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-items-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-items-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-monitors-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-monitors-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-monitors-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-monitors-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-orders-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-orders-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-orders-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-orders-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-search-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-search-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-search-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-search-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-subscriptions-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-subscriptions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-subscriptions-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-subscriptions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-tasks-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-tasks-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-tasks-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-tasks-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-tokens-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-tokens-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-tokens-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-tokens-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-users-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-users-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-users-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-users-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-wfs-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-wfs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-wfs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-wfs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-wms-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-wms-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-wms-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-wms-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-wmts-api.opencollection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-wmts-api
+    method: unknown
+    evidence: no authorship recorded
   collections/maxar-technologies-wmts-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-wmts-api
+    method: unknown
+    evidence: no authorship recorded
   collections/monitoring.opencollection.json:
     method: unknown
     evidence: no authorship recorded
@@ -208,11 +211,17 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   finops/maxar-technologies-finops.yml:
-    method: unknown
-    evidence: no authorship recorded
+    method: generated
+    evidence: declared in the artifact
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  integrations/_index.yml:
+    method: generated
+    evidence: carries an API Evangelist house phrase
+  integrations/vantor-integration-edges.yml:
+    method: searched
+    evidence: declared in the artifact
   json-ld/maxar-technologies-context.jsonld:
     method: unknown
     evidence: no authorship recorded
@@ -237,127 +246,7 @@ artifacts:
   json-structure/maxar-technologies-task-structure.json:
     method: unknown
     evidence: no authorship recorded
-  kin/checks-2026-09-24T161608.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T125852.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T133943.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T143147.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T154045.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-26T215308.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T094438.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T103455.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T123021.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T132314.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T140727.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-28T221322.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T213958.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T230545.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T203505.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T220315.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-31T223420.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T063623.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T210448.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T222808.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T224043.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T161828.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T174231.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T062714.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T212454.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T224856.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T055819.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T072335.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T144739.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T195450.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T211839.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T011047.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T224210.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T200636.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T213054.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T214843.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T232836.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T204815.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T222408.yml:
+  kin/checks-2026-10-11T110117.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-12T062655.yml:
@@ -441,6 +330,21 @@ artifacts:
   kin/score-2026-09-24T161608.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T210408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T232841.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T000835.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T024842.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-11T110117.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   openapi/_original/admin-openapi.yml:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
@@ -450,6 +354,102 @@ artifacts:
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
       to the provider's source is unverified
   openapi/_original/discovery-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-authentication-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-discovery-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-ordering-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-accounts-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-api-keys-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-collections-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-credits-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-deliveries-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-estimates-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-events-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-feasibility-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-image-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-introspection-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-items-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-monitors-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-orders-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-search-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-subscriptions-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-tasks-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-tokens-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-users-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-wfs-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-wms-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/maxar-technologies-wmts-api-openapi.yml:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
       to the provider's source is unverified
@@ -469,147 +469,147 @@ artifacts:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
       to the provider's source is unverified
-  openapi/maxar-authentication-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/maxar-discovery-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/maxar-ordering-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/maxar-technologies-accounts-api-openapi.yml:
+  openapi/vantor-accounts-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-api-keys-api-openapi.yml:
+  openapi/vantor-api-keys-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-collections-api-openapi.yml:
+  openapi/vantor-authentication-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-credits-api-openapi.yml:
+  openapi/vantor-collections-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-deliveries-api-openapi.yml:
+  openapi/vantor-credits-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-estimates-api-openapi.yml:
+  openapi/vantor-deliveries-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-events-api-openapi.yml:
+  openapi/vantor-discovery-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-feasibility-api-openapi.yml:
+  openapi/vantor-estimates-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-image-api-openapi.yml:
+  openapi/vantor-events-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-introspection-api-openapi.yml:
+  openapi/vantor-feasibility-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-items-api-openapi.yml:
+  openapi/vantor-image-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-monitors-api-openapi.yml:
+  openapi/vantor-introspection-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-orders-api-openapi.yml:
+  openapi/vantor-items-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-search-api-openapi.yml:
+  openapi/vantor-monitors-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-subscriptions-api-openapi.yml:
+  openapi/vantor-ordering-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-tasks-api-openapi.yml:
+  openapi/vantor-orders-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-tokens-api-openapi.yml:
+  openapi/vantor-search-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-users-api-openapi.yml:
+  openapi/vantor-subscriptions-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-wfs-api-openapi.yml:
+  openapi/vantor-tasks-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-wms-api-openapi.yml:
+  openapi/vantor-tokens-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/maxar-technologies-wmts-api-openapi.yml:
+  openapi/vantor-users-api-openapi.yml:
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+  openapi/vantor-wfs-api-openapi.yml:
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+  openapi/vantor-wms-api-openapi.yml:
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+  openapi/vantor-wmts-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   plans/maxar-technologies-plans-pricing.yml:
-    method: unknown
-    evidence: no authorship recorded
+    method: generated
+    evidence: declared in the artifact
   postman/maxar-technologies-accounts-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-accounts-api
-  postman/maxar-technologies-api-keys-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-api-keys-api
-  postman/maxar-technologies-collections-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-collections-api
-  postman/maxar-technologies-credits-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-credits-api
-  postman/maxar-technologies-deliveries-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-deliveries-api
-  postman/maxar-technologies-estimates-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-estimates-api
-  postman/maxar-technologies-events-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-events-api
-  postman/maxar-technologies-feasibility-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-feasibility-api
-  postman/maxar-technologies-image-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-image-api
-  postman/maxar-technologies-introspection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-introspection-api
-  postman/maxar-technologies-items-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-items-api
-  postman/maxar-technologies-monitors-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-monitors-api
-  postman/maxar-technologies-orders-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-orders-api
-  postman/maxar-technologies-search-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-search-api
-  postman/maxar-technologies-subscriptions-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-subscriptions-api
-  postman/maxar-technologies-tasks-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-tasks-api
-  postman/maxar-technologies-tokens-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-tokens-api
-  postman/maxar-technologies-users-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-users-api
-  postman/maxar-technologies-wfs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-wfs-api
-  postman/maxar-technologies-wms-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-wms-api
-  postman/maxar-technologies-wmts-api.postman_collection.json:
-    method: derived
-    evidence: openapi/maxar-technologies-wmts-api
-  rate-limits/maxar-technologies-rate-limits.yml:
     method: unknown
     evidence: no authorship recorded
+  postman/maxar-technologies-api-keys-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-collections-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-credits-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-deliveries-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-estimates-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-events-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-feasibility-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-image-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-introspection-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-items-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-monitors-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-orders-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-search-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-subscriptions-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-tasks-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-tokens-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-users-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-wfs-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-wms-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  postman/maxar-technologies-wmts-api.postman_collection.json:
+    method: unknown
+    evidence: no authorship recorded
+  rate-limits/maxar-technologies-rate-limits.yml:
+    method: generated
+    evidence: declared in the artifact
   rules/maxar-technologies-jsonschema-spectral-rules.yml:
     method: generated
     evidence: declared in the artifact
